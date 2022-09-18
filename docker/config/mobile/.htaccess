@@ -2,5 +2,5 @@
     RewriteEngine On
     RewriteCond %{HTTP_USER_AGENT} "!(android|blackberry|googlebot-mobile|iemobile|ipad|iphone|ipod|opera mobile|palmos|webos)" [NC]
     # NOTE: the variable DESKTOP_SITE should be defined
-    RewriteRule ^$ http://%{DESKTOP_SITE}:%{SERVER_PORT} [L,R=302]
+    RewriteRule ^$ http://%{ENV:DESKTOP_SITE}:%{SERVER_PORT} [L,R=302]
 </IfModule>
