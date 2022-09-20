@@ -44,6 +44,9 @@ module.exports = (env, argv) => {
     if (argv.mode !== 'production') {
         config.mode = 'development';
         config.devtool = 'source-map';
+        config.devServer = {
+            static: './dist/desktop-site'
+        };
     }
 
     return config;
