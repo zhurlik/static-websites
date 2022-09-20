@@ -18,12 +18,17 @@ module.exports = (env, argv) => {
         output: {
             path: path.resolve(__dirname, 'dist/desktop-site'),
             clean: true,
+            assetModuleFilename: 'images/[hash][ext][query]'
         },
         module: {
             rules: [
                 {
                     test: /\.ejs$/i,
                     use: ['html-loader', 'template-ejs-loader']
+                },
+                {
+                    test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                    type: 'asset/resource',
                 },
             ],
         },
