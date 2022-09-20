@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// import .env file
-require('dotenv').config()
+require('dotenv').config();
 
 module.exports = (env, argv) => {
     const config = {
@@ -18,19 +17,26 @@ module.exports = (env, argv) => {
         },
         output: {
             path: path.resolve(__dirname, 'dist/mobile-site'),
+            clean: true,
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.ejs$/i,
+                    use: ['html-loader', 'template-ejs-loader']
+                },
+            ],
         },
         plugins: [
             new HtmlWebpackPlugin({
-                title: 'Index page.',
+                template: '../template/page/index/index.ejs',
                 filename: 'index.html',
                 chunks: ['index'],
-                mobile: true
             }),
             new HtmlWebpackPlugin({
-                title: 'About page.',
+                template: '../template/page/about/index.ejs',
                 filename: 'about.html',
                 chunks: ['about'],
-                mobile: true
             }),
         ],
     };

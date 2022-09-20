@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <% const data = require('../../../data/about-data.js') -%>
+        <%= data.title %>
+    </title>
+</head>
+<body><%- include('./body.ejs', data) -%></body>
+</html>
