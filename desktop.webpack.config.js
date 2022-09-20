@@ -8,11 +8,11 @@ module.exports = (env, argv) => {
         entry: {
             index: {
                 import: './index.js',
-                filename: 'js/pages/[name]-[fullhash].js'
+                filename: 'js/pages/[name].js'
             },
             about: {
                 import: './about.js',
-                filename: 'js/pages/[name]-[fullhash].js'
+                filename: 'js/pages/[name].js'
             }
         },
         output: {
@@ -32,11 +32,19 @@ module.exports = (env, argv) => {
                 template: '../template/page/index/index.ejs',
                 filename: 'index.html',
                 chunks: ['index'],
+                hash: true,
+                minify: {
+                    collapseWhitespace: true
+                }
             }),
             new HtmlWebpackPlugin({
                 template: '../template/page/about/index.ejs',
                 filename: 'about.html',
                 chunks: ['about'],
+                hash: true,
+                minify: {
+                    collapseWhitespace: true
+                }
             }),
         ],
     };
