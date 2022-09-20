@@ -1,5 +1,7 @@
 'use strict';
 
 window.addEventListener('load', () => {
-   document.write('<h1>Hello Desktop!!!</h1>');
+    setTimeout(() => {
+        document.write('<h1>Hello Desktop!!!</h1>');
+    }, 2000);
 });
