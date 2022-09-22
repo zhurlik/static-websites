@@ -112,10 +112,10 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     services: ['chromedriver'],
 
-    // 'goog:chromeOptions': {
-    //     args:'headless',
-    // },
-    
+    'goog:chromeOptions': {
+        args:'headless',
+    },
+
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks
