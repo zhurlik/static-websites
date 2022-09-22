@@ -59,7 +59,8 @@ module.exports = (env, argv) => {
         config.devtool = 'source-map';
         config.devServer = {
             static: './dist/desktop-site',
-            port: 8081
+            port: 8081,
+            setupExitSignals: true
         };
     }
 
