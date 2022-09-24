@@ -12,3 +12,5 @@ Its main purpose is to bundle JavaScript files for usage in a browser, yet it is
 EJS (Embeded JavaScript) loader for Webpack. It converts EJS templates to plain HTML using the EJS npm package. It simplifies creation of HTML pages
 * [postcss-loader](https://webpack.js.org/loaders/postcss-loader/)  
 Loader to process CSS with PostCSS
+* [WebdriverIO](https://webdriver.io/)  
+It is useful for testing web applications
