@@ -18,9 +18,9 @@
         "docker": "docker run -it --rm --name test-sites --env-file .env -p 80:80 -v $(pwd)/dist/mobile-site:/var/www/mobile -v $(pwd)/dist/desktop-site:/var/www/desktop static-websites",
         "docker:rm": "docker rm -f test-sites",
         "docker:bash": "docker run -it --rm --name test-sites --env-file .env -p 80:80 -v $(pwd)/dist/mobile-site:/var/www/mobile -v $(pwd)/dist/desktop-site:/var/www/desktop static-websites /bin/bash",
-        "test:desktop": "npm run start:desktop & npm run wdio",
+        "test:desktop": "npm run start:desktop & npm run wdio --spec ./test/specs/desktop-*.js",
         "posttest:desktop": "npm run kill:desktop",
-        "test:mobile": "npm run start:mobile & npm run wdio",
+        "test:mobile": "npm run start:mobile & npm run wdio --spec ./test/specs/mobile-*.js",
         "posttest:mobile": "npm run kill:mobile",
         "wdio": "wdio run wdio.conf.js",
         "test": "npm run test:desktop && npm run test:mobile"
