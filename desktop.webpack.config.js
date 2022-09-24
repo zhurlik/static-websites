@@ -8,11 +8,11 @@ module.exports = (env, argv) => {
         entry: {
             index: {
                 import: './index.js',
-                filename: 'js/pages/[name].js'
+                filename: 'js/[name].js'
             },
             about: {
                 import: './about.js',
-                filename: 'js/pages/[name].js'
+                filename: 'js/[name].js'
             }
         },
         output: {
@@ -29,6 +29,10 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: 'asset/resource',
+                },
+                {
+                    test: /\.css$/i,
+                    use: ['style-loader', 'css-loader', 'postcss-loader'],
                 },
             ],
         },
@@ -60,7 +64,8 @@ module.exports = (env, argv) => {
         config.devServer = {
             static: './dist/desktop-site',
             port: 8081,
-            setupExitSignals: true
+            setupExitSignals: true,
+            compress: true
         };
     }
 
