@@ -1,5 +1,5 @@
 'use strict';
-import testImg from '../image/index-img.png';
+import testImg from '../template/page/index/image/index-img.png';
 
 window.addEventListener('load', () => {
     setTimeout(() => {
