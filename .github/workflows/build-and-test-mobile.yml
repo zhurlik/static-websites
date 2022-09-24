@@ -28,4 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build:mobile
-    - run: npm run test:mobile
+    - run: npm run kill:webdev && npm run test:mobile
+
