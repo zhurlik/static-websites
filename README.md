@@ -3,6 +3,8 @@ Static web sites: desktop + mobile
 ![example workflow](https://github.com/zhurlik/static-websites/actions/workflows/build-and-test-desktop.yml/badge.svg)
 ![example workflow](https://github.com/zhurlik/static-websites/actions/workflows/build-and-test-mobile.yml/badge.svg)
 
+Often there is a need to make a simple static site. This project demonstrates how you can, for example, make two static sites: for mobile devices and desktop browsers.
+
 # some helpful links
 * [webpack](https://webpack.js.org/guides/)  
 Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset
