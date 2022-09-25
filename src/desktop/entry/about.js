@@ -1,4 +1,5 @@
 'use strict';
+import '../template/page/about/css/about.css'
 
 window.addEventListener('load', () => {
    setTimeout(() => {
